@@ -1,3 +1,12 @@
+# Todo-list React
+
+this is the web page where you can add your tasks to do and you can mark 
+done tasks or delete them
+
+# Demo 
+
+https://michalgozdek.github.io/todo-list-react/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
