@@ -14,9 +14,7 @@ function App() {
     [
       { id: 1, content: "test1", done: false},
       { id: 2, content: "test2", done: true},
-    ]
-    
-  );
+    ] );
 
   const toggleHideDone = () => {
     setHideDone(hideDoneTasks => !hideDoneTasks);
@@ -80,7 +78,7 @@ function App() {
      hideDoneTasks={hideDoneTasks} 
      toggleHideDone={toggleHideDone} 
      setAllDone={setAllDone}
-     />}
+      />}
     />
     
     </Conteiner>
