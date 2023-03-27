@@ -7,6 +7,8 @@ done tasks or delete them
 
 https://michalgozdek.github.io/todo-list-react/
 
+![view of maye page](src/todolist.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
