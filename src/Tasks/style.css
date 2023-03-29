@@ -35,3 +35,6 @@
     background: rgb(255, 81, 81);
   }
   
+  .tasks__item--hidden {
+    display: none;
+  }
