@@ -1,28 +1,18 @@
-import "./style.css";
+import { Switch, Button } from "./styled";
 
 const Buttons = ({ tasks, hideDoneTasks, toggleHideDone, setAllDone }) => (
-    
-    
-
-    <div className="button">
-       { tasks.length > 0 && (
-        
-         <>
-        <button onClick={toggleHideDone} className="buttons__button">
-           {hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
-       </button>
-       <button
-            onClick={setAllDone}
-           className="buttons__button" 
-           disabled={tasks.every(({ done }) => done)}
-       >
-           Ukończ wszystkie
-       </button>
-       
-       </>
-        )}
-    </div>
-    
-   );
+  <Switch>
+    {tasks.length > 0 && (
+      <>
+        <Button onClick={toggleHideDone}>
+          {hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+        </Button>
+        <Button onClick={setAllDone} disabled={tasks.every(({ done }) => done)}>
+          Ukończ wszystkie
+        </Button>
+      </>
+    )}
+  </Switch>
+);
 
 export default Buttons;
