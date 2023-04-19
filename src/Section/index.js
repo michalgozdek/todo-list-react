@@ -1,15 +1,13 @@
-import "./style.css"
+import { Box, Main, Header, Plus } from "./section";
 
-const Section = ({title, body, extraHeaderContent}) => (
-    <div className="section">
-      <section className="section__body">
-      <div className="section__header">{title}</div>
+const Section = ({ title, body, extraHeaderContent }) => (
+  <Main>
+    <Box className="section__body">
+      <Header>{title}</Header>
       {extraHeaderContent}
-    </section>
-      <div className="section_plus">
-         {body}
-      </div>
-    </div>
+    </Box>
+    <Plus>{body}</Plus>
+  </Main>
 );
 
-export default Section
+export default Section;
