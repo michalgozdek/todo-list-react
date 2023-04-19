@@ -1,29 +1,28 @@
-import { useState } from 'react';
-import './stylee.css';
+import { useState } from "react";
+import { Field, Input, Button } from "./styled";
 
-const Form = ({addNewTask}) => {
-  const [newTaskContent, setNewTaskContent] = useState("");  
+const Form = ({ addNewTask }) => {
+  const [newTaskContent, setNewTaskContent] = useState("");
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    if (newTaskContent.trim()==="") {
+    if (newTaskContent.trim() === "") {
       return;
     }
-    
+
     addNewTask(newTaskContent.trim());
   };
 
   return (
-    <form className="form"  onSubmit={onFormSubmit}>
-    <input
-      value={newTaskContent}
-      className="form__input" autofocus 
-       placeholder="co dziś robimy?"
-       onChange={({target}) => setNewTaskContent(target.value)}
-    />
-    <button className="form__button">Dodaj zadanie</button>
-  </form>
-);
-
+    <Field className="form" onSubmit={onFormSubmit}>
+      <Input
+        value={newTaskContent}
+        autoFocus
+        placeholder="co dziś robimy?"
+        onChange={({ target }) => setNewTaskContent(target.value)}
+      />
+      <Button className="form__button">Dodaj zadanie</Button>
+    </Field>
+  );
 };
 export default Form;
