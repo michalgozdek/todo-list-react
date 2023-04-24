@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { Field, Input, Button } from "./styled";
+import { useRef } from "react";
 
 const Form = ({ addNewTask }) => {
   const [newTaskContent, setNewTaskContent] = useState("");
+
+  const inputRef = useRef(null);
+
+  const focusInput = () => {
+    inputRef.current.focus();
+  };
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -16,12 +23,13 @@ const Form = ({ addNewTask }) => {
   return (
     <Field className="form" onSubmit={onFormSubmit}>
       <Input
+        ref={inputRef}
         value={newTaskContent}
         autoFocus
         placeholder="co dziś robimy?"
         onChange={({ target }) => setNewTaskContent(target.value)}
       />
-      <Button className="form__button">Dodaj zadanie</Button>
+      <Button onClick={focusInput}>Dodaj zadanie</Button>
     </Field>
   );
 };
