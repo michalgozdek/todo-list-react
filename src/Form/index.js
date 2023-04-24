@@ -22,7 +22,7 @@ const Form = ({ addNewTask }) => {
   };
 
   return (
-    <Field className="form" onSubmit={onFormSubmit}>
+    <Field onSubmit={onFormSubmit}>
       <Input
         ref={inputRef}
         value={newTaskContent}

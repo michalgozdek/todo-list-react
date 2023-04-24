@@ -2,7 +2,7 @@ import { Box, Main, Header, Plus } from "./section";
 
 const Section = ({ title, body, extraHeaderContent }) => (
   <Main>
-    <Box className="section__body">
+    <Box>
       <Header>{title}</Header>
       {extraHeaderContent}
     </Box>
